@@ -56,7 +56,7 @@ export default function DealDetail({ deal, onClose }) {
           <div className="grid grid-cols-3 gap-3">
             {[
               { label: 'Deal Value', value: `$${(deal.value / 1000).toFixed(0)}K` },
-              { label: 'Procurement Days', value: deal.procurementDays || '—' },
+              { label: 'Procurement Days', value: deal.procurementDays || '\u2014' },
               { label: 'Doc Completion', value: `${deal.docCompletion}%` },
             ].map((m, i) => (
               <div key={i} className="bg-zinc-50 rounded-xl p-3 text-center">
@@ -75,10 +75,10 @@ export default function DealDetail({ deal, onClose }) {
                   <div key={i} className="flex-1">
                     <div className={`h-2 rounded-full mb-1 ${
                       i < deal.salesStageIndex ? 'bg-zinc-700' :
-                      i === deal.salesStageIndex ? 'bg-orbital-500' : 'bg-zinc-100'
+                      i === deal.salesStageIndex ? 'bg-hb-500' : 'bg-zinc-100'
                     }`} />
                     <p className={`text-[9px] text-center truncate ${
-                      i === deal.salesStageIndex ? 'text-orbital-600 font-medium' : 'text-zinc-400'
+                      i === deal.salesStageIndex ? 'text-hb-500 font-medium' : 'text-zinc-400'
                     }`}>{stage}</p>
                   </div>
                 ))}
@@ -152,7 +152,7 @@ export default function DealDetail({ deal, onClose }) {
                       </div>
                       <div className="flex-1 min-w-0">
                         <p className="text-sm font-medium text-zinc-900 truncate">{doc.name}</p>
-                        <p className="text-xs text-zinc-500">{doc.reviewer}{doc.due ? ` · Due ${doc.due}` : ''}</p>
+                        <p className="text-xs text-zinc-500">{doc.reviewer}{doc.due ? ` \u00b7 Due ${doc.due}` : ''}</p>
                       </div>
                       <span className={`text-[10px] font-medium px-2 py-0.5 rounded-full ${style.bg} ${style.text}`}>
                         {style.label}

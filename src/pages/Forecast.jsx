@@ -88,12 +88,12 @@ export default function Forecast({ deals }) {
             <AreaChart data={MONTHLY_FORECAST} margin={{ left: 0, right: 20, top: 5 }}>
               <defs>
                 <linearGradient id="salesGrad" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="5%" stopColor="#6366f1" stopOpacity={0.15} />
-                  <stop offset="95%" stopColor="#6366f1" stopOpacity={0} />
+                  <stop offset="5%" stopColor="#04433D" stopOpacity={0.15} />
+                  <stop offset="95%" stopColor="#04433D" stopOpacity={0} />
                 </linearGradient>
                 <linearGradient id="adjGrad" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="5%" stopColor="#14b8a6" stopOpacity={0.15} />
-                  <stop offset="95%" stopColor="#14b8a6" stopOpacity={0} />
+                  <stop offset="5%" stopColor="#4C9E82" stopOpacity={0.15} />
+                  <stop offset="95%" stopColor="#4C9E82" stopOpacity={0} />
                 </linearGradient>
               </defs>
               <CartesianGrid strokeDasharray="3 3" stroke="#f4f4f5" vertical={false} />
@@ -101,9 +101,9 @@ export default function Forecast({ deals }) {
               <YAxis axisLine={false} tickLine={false} tick={{ fontSize: 11, fill: '#a1a1aa' }}
                 tickFormatter={v => `$${v / 1000}K`} />
               <Tooltip content={<CustomTooltip />} />
-              <Area type="monotone" dataKey="sales" name="Sales Forecast" stroke="#6366f1" strokeWidth={2}
+              <Area type="monotone" dataKey="sales" name="Sales Forecast" stroke="#04433D" strokeWidth={2}
                 fill="url(#salesGrad)" animationDuration={1200} />
-              <Area type="monotone" dataKey="adjusted" name="Adj. Forecast" stroke="#14b8a6" strokeWidth={2}
+              <Area type="monotone" dataKey="adjusted" name="Adj. Forecast" stroke="#4C9E82" strokeWidth={2}
                 fill="url(#adjGrad)" animationDuration={1200} strokeDasharray="6 3" />
             </AreaChart>
           </ResponsiveContainer>

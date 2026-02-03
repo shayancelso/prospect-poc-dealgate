@@ -2,17 +2,18 @@
 
 @theme {
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
-  --color-orbital-50: #eef5ff;
-  --color-orbital-100: #d9e8ff;
-  --color-orbital-200: #bcd8ff;
-  --color-orbital-300: #8ec0ff;
-  --color-orbital-400: #599dff;
-  --color-orbital-500: #3375ff;
-  --color-orbital-600: #1b54f5;
-  --color-orbital-700: #143ee1;
-  --color-orbital-800: #1733b6;
-  --color-orbital-900: #19308f;
-  --color-orbital-950: #141f57;
+  --color-hb-50: #e8f5f0;
+  --color-hb-100: #CAE3DA;
+  --color-hb-200: #a3d4c0;
+  --color-hb-300: #4C9E82;
+  --color-hb-400: #3a8a6e;
+  --color-hb-500: #1B4332;
+  --color-hb-600: #04433D;
+  --color-hb-700: #033a34;
+  --color-hb-800: #022e29;
+  --color-hb-900: #01231f;
+  --color-hb-950: #001916;
+  --color-hb-blue: #3985BE;
 }
 
 @layer base {

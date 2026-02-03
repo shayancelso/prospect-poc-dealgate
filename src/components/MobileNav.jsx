@@ -19,7 +19,7 @@ export default function MobileNav({ page, setPage }) {
               key={item.id}
               onClick={() => setPage(item.id)}
               className={`flex flex-col items-center gap-1 px-3 py-1.5 rounded-lg transition-colors ${
-                active ? 'text-orbital-600' : 'text-zinc-400'
+                active ? 'text-hb-500' : 'text-zinc-400'
               }`}
             >
               <Icon className="w-5 h-5" />

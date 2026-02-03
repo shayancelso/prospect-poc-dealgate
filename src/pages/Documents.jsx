@@ -68,7 +68,7 @@ export default function Documents({ deals, onSelectDeal }) {
               <div className="flex items-center gap-3">
                 <div className="w-24 h-2 bg-zinc-100 rounded-full overflow-hidden">
                   <motion.div
-                    className="h-full bg-gradient-to-r from-orbital-500 to-orbital-400 rounded-full"
+                    className="h-full bg-gradient-to-r from-hb-500 to-hb-400 rounded-full"
                     initial={{ width: 0 }}
                     animate={{ width: `${deal.docCompletion}%` }}
                     transition={{ duration: 0.8, delay: 0.2 }}

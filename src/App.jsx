@@ -21,7 +21,7 @@ export default function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   useEffect(() => {
-    const seen = localStorage.getItem('dealgate-seen');
+    const seen = localStorage.getItem('dealgate-hb-seen');
     if (!seen) {
       setShowValueProp(true);
     }
@@ -29,7 +29,7 @@ export default function App() {
 
   const handleCloseValueProp = () => {
     setShowValueProp(false);
-    localStorage.setItem('dealgate-seen', 'true');
+    localStorage.setItem('dealgate-hb-seen', 'true');
     setTimeout(() => setShowTour(true), 400);
   };
 
@@ -47,7 +47,7 @@ export default function App() {
   };
 
   return (
-    <div className="flex h-screen bg-zinc-50 overflow-hidden">
+    <div className="flex h-screen bg-[#F5F7F9] overflow-hidden">
       {/* Desktop Sidebar */}
       <div className="hidden lg:block">
         <Sidebar page={page} setPage={setPage} onRestartTour={handleRestartTour} />
@@ -85,9 +85,7 @@ export default function App() {
             <svg className="w-5 h-5 text-zinc-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" /></svg>
           </button>
           <div className="flex items-center gap-2">
-            <div className="w-6 h-6 rounded-lg bg-gradient-to-br from-orbital-500 to-orbital-700 flex items-center justify-center">
-              <span className="text-white text-[10px] font-bold">O</span>
-            </div>
+            <img src="https://www.hummingbird.co/hubfs/bird-500.png" alt="Hummingbird" className="w-6 h-6 object-contain" />
             <span className="text-sm font-semibold text-zinc-900">DealGate</span>
           </div>
           <button onClick={handleRestartTour} className="p-1.5 hover:bg-zinc-100 rounded-lg transition-colors">

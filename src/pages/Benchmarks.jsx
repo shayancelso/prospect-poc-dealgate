@@ -77,7 +77,7 @@ export default function Benchmarks() {
                   <p className="text-xs text-zinc-600"><span className="font-medium text-zinc-800">Bottleneck:</span> {b.bottleneck}</p>
                 </div>
                 <div className="flex items-start gap-2">
-                  <Lightbulb className="w-3.5 h-3.5 text-orbital-500 mt-0.5 flex-shrink-0" />
+                  <Lightbulb className="w-3.5 h-3.5 text-hb-500 mt-0.5 flex-shrink-0" />
                   <p className="text-xs text-zinc-600">{b.tip}</p>
                 </div>
               </div>

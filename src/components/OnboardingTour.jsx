@@ -4,17 +4,17 @@ import { X, ArrowRight, ArrowLeft } from 'lucide-react';
 const STEPS = [
   {
     title: 'Dual-Track Pipeline',
-    desc: 'Every deal shows both its sales stage and procurement progress. No more deals disappearing into procurement black holes.',
+    desc: 'Every deal shows both its sales stage and procurement progress. No more deals disappearing into bank procurement black holes.',
     page: 'pipeline',
   },
   {
     title: 'Document Tracker',
-    desc: 'Track security questionnaires, SOC 2 reports, DPAs, and risk assessments across all deals. See what\'s blocking each deal.',
+    desc: 'Track security questionnaires, SOC 2 reports, DPAs, and vendor risk assessments across all deals. See what\'s blocking each deal.',
     page: 'documents',
   },
   {
     title: 'Institution Benchmarks',
-    desc: 'Know that banks average 78 days in procurement while fintechs close in 18. Set realistic expectations from day one.',
+    desc: 'Know that banks average 78 days in procurement while fintechs close in 18. Set realistic expectations with BSA officers and risk committees.',
     page: 'benchmarks',
   },
   {
@@ -65,13 +65,13 @@ export default function OnboardingTour({ step, setStep, onClose, setPage }) {
             <div
               key={i}
               className={`h-1 rounded-full transition-all duration-300 ${
-                i === step ? 'w-6 bg-orbital-400' : i < step ? 'w-3 bg-orbital-600' : 'w-3 bg-zinc-700'
+                i === step ? 'w-6 bg-hb-300' : i < step ? 'w-3 bg-hb-500' : 'w-3 bg-zinc-700'
               }`}
             />
           ))}
         </div>
 
-        <p className="text-xs font-medium text-orbital-400 uppercase tracking-wider mb-1">
+        <p className="text-xs font-medium text-hb-300 uppercase tracking-wider mb-1">
           Step {step + 1} of {STEPS.length}
         </p>
         <h3 className="text-base font-semibold mb-1.5">{current.title}</h3>
@@ -88,7 +88,7 @@ export default function OnboardingTour({ step, setStep, onClose, setPage }) {
           )}
           <button
             onClick={handleNext}
-            className="flex-1 flex items-center justify-center gap-1.5 px-4 py-2 bg-orbital-500 hover:bg-orbital-600 text-white text-sm font-medium rounded-lg active:scale-[0.98] transition-all"
+            className="flex-1 flex items-center justify-center gap-1.5 px-4 py-2 bg-hb-500 hover:bg-hb-600 text-white text-sm font-medium rounded-lg active:scale-[0.98] transition-all"
           >
             {step < STEPS.length - 1 ? (
               <>Next <ArrowRight className="w-3.5 h-3.5" /></>

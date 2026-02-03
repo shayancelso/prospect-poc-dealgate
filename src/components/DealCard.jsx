@@ -25,7 +25,7 @@ export default function DealCard({ deal, onClick, index = 0 }) {
       {/* Header */}
       <div className="flex items-start justify-between gap-2">
         <div className="min-w-0">
-          <p className="text-sm font-semibold text-zinc-900 truncate group-hover:text-orbital-600 transition-colors">
+          <p className="text-sm font-semibold text-zinc-900 truncate group-hover:text-hb-500 transition-colors">
             {deal.institution}
           </p>
           <p className="text-xs text-zinc-500 truncate">{deal.name}</p>
@@ -55,7 +55,7 @@ export default function DealCard({ deal, onClick, index = 0 }) {
                 key={i}
                 className={`h-1.5 flex-1 rounded-full ${
                   i < deal.salesStageIndex ? 'bg-zinc-700' :
-                  i === deal.salesStageIndex ? 'bg-orbital-500' : 'bg-zinc-100'
+                  i === deal.salesStageIndex ? 'bg-hb-500' : 'bg-zinc-100'
                 }`}
               />
             ))}
@@ -97,7 +97,7 @@ export default function DealCard({ deal, onClick, index = 0 }) {
 
       {/* Owner */}
       <div className="flex items-center gap-2">
-        <div className="w-5 h-5 rounded-full bg-gradient-to-br from-orbital-400 to-orbital-600 flex items-center justify-center">
+        <div className="w-5 h-5 rounded-full bg-gradient-to-br from-hb-300 to-hb-500 flex items-center justify-center">
           <span className="text-white text-[8px] font-semibold">{deal.owner.avatar}</span>
         </div>
         <span className="text-xs text-zinc-500">{deal.owner.name}</span>
